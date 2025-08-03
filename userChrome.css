@@ -1,7 +1,7 @@
 /* Tighten up drop-down/context/popup menu spacing */
-menupopup:not(.in-menulist) > menuitem, 
+menupopup:not(.in-menulist) > menuitem,
 menupopup:not(.in-menulist) > menu {
-  padding-block: 4px !important; /*  reduce to 3px, 2px, 1px or 0px as needed */ 
+  padding-block: 4px !important; /*  reduce to 3px, 2px, 1px or 0px as needed */
   min-height: unset !important; /*  v92.0 - for padding below 4px */
 }
 :root {
@@ -31,7 +31,7 @@ menupopup:not(.in-menulist) > menu {
     --tab-min-height: 29px !important;
 }
 /*  Tweak for covering a line at the bottom of the active tab on some themes */
-#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar, 
+#main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar,
 #main-window[sizemode="normal"] #toolbar-menubar[autohide="true"] + #TabsToolbar #tabbrowser-tabs {
     --tab-min-height: 30px !important;
 }
@@ -46,8 +46,8 @@ menupopup:not(.in-menulist) > menu {
     max-height: calc(var(--tab-min-height) + 1px) !important;
 }
 /*  [Connected Tabs] Adjust padding around icons on buttons to avoid crushed images */
-#TabsToolbar-customization-target toolbarbutton > .toolbarbutton-icon, 
-#TabsToolbar-customization-target .toolbarbutton-text, 
+#TabsToolbar-customization-target toolbarbutton > .toolbarbutton-icon,
+#TabsToolbar-customization-target .toolbarbutton-text,
 #TabsToolbar-customization-target .toolbarbutton-badge-stack,
 #scrollbutton-up,#scrollbutton-down {
     padding-top: 7px !important;
@@ -95,9 +95,9 @@ menupopup:not(.in-menulist) > menu {
 
 /*  Override the rules for hover/not hover visibility */
 /*  for mute button */
-.tabbrowser-tab:not(:hover) .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]), 
+.tabbrowser-tab:not(:hover) .tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]),
 /*  for site icon */
-.tabbrowser-tab:hover .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) > :not(.tab-icon-overlay), 
+.tabbrowser-tab:hover .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) > :not(.tab-icon-overlay),
 /*  for site icon with Compact density */
 :root[uidensity="compact"] .tab-icon-stack:not([pinned], [sharing], [crashed]):is([soundplaying], [muted]) > :not(.tab-icon-overlay) {
     opacity: 1 !important; /*  overrides full transparency with full opacity */
@@ -124,9 +124,9 @@ menupopup:not(.in-menulist) > menu {
     margin-left: -6px !important; /*  reduce empty space on the left */
     margin-top: calc((var(--user-mute-button-height) - 16px) / 2) !important;  /*  keep site icon reasonably positioned */
 }
-.tabbrowser-tab:not(:hover) .tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted]), 
+.tabbrowser-tab:not(:hover) .tab-icon-overlay:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted]),
 /*  for site icon */
-.tabbrowser-tab:hover .tab-icon-stack:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted]) > :not(.tab-icon-overlay), 
+.tabbrowser-tab:hover .tab-icon-stack:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted]) > :not(.tab-icon-overlay),
 /*  for site icon with Compact density */
 :root[uidensity="compact"] .tab-icon-stack:not([crashed]):is([pinned], [sharing]):is([soundplaying], [muted]) > :not(.tab-icon-overlay) {
     opacity: 1 !important; /*  overrides full transparency with full opacity */
@@ -165,4 +165,13 @@ menupopup:not(.in-menulist) > menu {
 }
 #identity-permission-box {
   display: none !important;
+}
+
+/* Remove the ugly new search switcher */
+
+#urlbar-searchmode-switcher {
+  visibility: hidden !important;
+  width: 0.01em !important;
+  padding: 0em !important;
+  margin: 0em !important;
 }
